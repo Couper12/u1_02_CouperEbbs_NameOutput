@@ -1,0 +1,39 @@
+<Window x:Class="u1_02_CouperEbbsOutput.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:u1_02_CouperEbbsOutput"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <StackPanel>
+
+        <Label x:Name="lblTitle" 
+               Content=""/>
+
+        <TextBox x:Name="entryFirstName" 
+                 Height="23" 
+                 TextWrapping="Wrap" 
+                 Text="Type first name here"/>
+        <TextBox x:Name="entryLastName"
+                 TextWrapping="Wrap"
+                 Text="Type last name here"/>
+
+        <Slider x:Name="sliderAge"  Margin="10, 0, 0, 0" 
+            Width="507" Orientation="Horizontal" HorizontalAlignment="Left" 
+            Value="50" Minimum="0" Maximum="100"
+            SmallChange="1" LargeChange="10"
+            TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="sliderAge_ValueChanged"
+            AutoToolTipPlacement="BottomRight"/>
+
+        <Button x:Name="btnShowGreeting" 
+                Content="Show Greeting"
+                Click="btnShowGreeting_Click"/>
+
+        <Label x:Name="lblOutput"
+               Content=""
+
+        />
+    </StackPanel>
+</Window>
